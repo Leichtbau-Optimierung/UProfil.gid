@@ -38,6 +38,12 @@ simulation.Run()
 
 # Post-processing
 if KratosToolsPresent:
+    meshFig = VisualizeMesh()
+    meshFig.vtkFolder = "vtk_output"
+    meshFig.vtkFile = "Structure_0_1.vtk"
+    meshFig.name = "UProfil"
+    meshFig.view =  (0.5, -0.5, 0.5)
+    meshFig.make()
     NodalFig = VisualizeNodalResults()
     NodalFig.name = "UProfil"
     NodalFig.vtkFolder = "vtk_output"
